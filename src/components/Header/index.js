@@ -17,6 +17,7 @@ class Header extends Component {
                 </div>
                 <div className="search-block">
 
+
                     <Search/>
                 </div>
                 <div className="control">
