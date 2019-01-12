@@ -1,26 +1,30 @@
-import React, {Component, Fragment} from 'react';
-
-// import App from "../../App";
+import React, { Component } from 'react';
+import './MailList.scss'
 
 class MailList extends Component {
+
+    state = {
+        openedMsg: []
+    };
+
+    togleMsg = () => {
+        let tample = this.state.openedMsg;
+        this.setState({
+
+        })
+    };
     render() {
+        let mailList = this.props.mails.map((item) => {
+            return (<li key={item.id}>{item.from} - {item.subject}</li>)
+        });
         return (
-            <Fragment>
+            <div className="mail-list">
                 <ul>
-                    <li>Письмо 1</li>
-                    <li>Письмо 2</li>
-                    <li>Письмо 3</li>
-                    <li>Письмо 4</li>
-                    <li>Письмо 5</li>
-                    <li>Письмо 6</li>
-                    <li>Письмо 7</li>
-                    <li>Письмо 8</li>
-                    <li>Письмо 9</li>
-                    <li>Письмо 10</li>
+                    {mailList}
                 </ul>
-            </Fragment>
+            </div>
         );
     }
 }
 
-export default MailList
+export default MailList;
