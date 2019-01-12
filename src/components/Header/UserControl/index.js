@@ -7,7 +7,7 @@ class UserControl extends Component {
         return (
             <Fragment>
                 {/*<input type="text" value="" placeholder="Search..."/>*/}
-                <button>Exit</button>
+                <button className="exit-button">Exit</button>
             </Fragment>
         );
     }

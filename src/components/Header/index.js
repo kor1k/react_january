@@ -10,7 +10,10 @@ class Header extends Component {
         return (
             <header>
                 <div className="main-header">
-                    <img src="https://img.icons8.com/color/50/000000/gmail.png" alt="logo"/>
+                    <a href="#">
+                        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x.png"
+                             alt="logo"/>
+                    </a>
                 </div>
                 <div className="search-block">
 
