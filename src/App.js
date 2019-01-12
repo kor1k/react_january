@@ -1,45 +1,60 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
+import React, {Component, Fragment} from 'react';
+
+import Header from './components/Header'
+import Menu from './components/Menu'
+import MailList from "./components/MailList";
+
 import './App.scss';
 
 class App extends Component {
     state = {
-        showGreetings: false,
-    };
-
-    showMsg = () => {
-        this.setState({
-            showGreetings: !this.state.showGreetings,
-        })
+        active: 'getted',
+        mailList: {
+            getted: [
+                {
+                    status: true,    // PROVERKA NA "PROCHITANO" ILI NET"
+                    from: 'test@danit.com',
+                    subject: 'Some some danit text'
+                },
+                {
+                    status: true,    // PROVERKA NA "PROCHITANO" ILI NET"
+                    from: 'test@aaasaaaaa.com',
+                    subject: 'Text from test at aaaaasaaaaa.com'
+                },
+                {
+                    status: true,    // PROVERKA NA "PROCHITANO" ILI NET"
+                    from: 'friend@hjkl;jklhjkl.com',
+                    subject: 'Text from friend'
+                }
+            ],
+            sent: [{
+                status: true,    // PROVERKA NA "PROCHITANO" ILI NET"
+                from: 'PETYA POROSHENKO',
+                subject: 'privet'
+            },
+                {
+                    status: true,    // PROVERKA NA "PROCHITANO" ILI NET"
+                    from: 'MOM',
+                    subject: 'Text from test at aaaaasaaaaa.com'
+                },
+                {
+                    status: true,    // PROVERKA NA "PROCHITANO" ILI NET"
+                    from: 'DAD',
+                    subject: 'Text from friend'
+                }],
+        }
     };
 
     render() {
-        let greetings = null;
-        let btnValue = 'Open';
-        if (this.state.showGreetings) {
-            greetings = <p>Hello world dude!</p>;
-            btnValue = 'Close'
-        }
-
+        let activeCategory = this.state.active;
         return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    {greetings}
-                    <button onClick={this.showMsg}>{btnValue}</button>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </header>
-            </div>
+            <Fragment>
+                <Header/>
+                <div className="main-region">
+                    <Menu active={activeCategory} />
+                    <MailList mails={this.state.mailList[this.state.active]}/>
+                </div>
+            </Fragment>
         );
     }
 }
