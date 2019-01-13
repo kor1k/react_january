@@ -22,6 +22,7 @@ class Header extends Component {
                 </div>
                 <div className="control">
                     <UserControl/>
+
                 </div>
             </header>
         )
