@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, {Component, Fragment} from 'react';
 import './menu.scss'
 
 class Menu extends Component {
@@ -13,12 +13,12 @@ class Menu extends Component {
                 id: 'sent'
             }
         ]
-    }
+    };
 
     render() {
-        let folderList = this.state.folders.map( (item) => {
+        let folderList = this.state.folders.map((item) => {
             let classN = null
-            if(item.id == this.props.active){
+            if (item.id == this.props.active) {
                 classN = "active"
             }
             return (<li
@@ -27,7 +27,7 @@ class Menu extends Component {
                 className={classN}>
                 {item.name}
             </li>)
-        })
+        });
         return (
             <Fragment>
                 <ul>

@@ -16,13 +16,10 @@ class Header extends Component {
                     </a>
                 </div>
                 <div className="search-block">
-
-
                     <Search/>
                 </div>
                 <div className="control">
                     <UserControl/>
-
                 </div>
             </header>
         )

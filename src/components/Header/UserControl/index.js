@@ -6,7 +6,6 @@ class UserControl extends Component {
     render() {
         return (
             <Fragment>
-                {/*<input type="text" value="" placeholder="Search..."/>*/}
                 <button className="exit-button">Exit</button>
             </Fragment>
         );

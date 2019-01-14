@@ -9,7 +9,7 @@ class Search extends Component {
                 <input type="text" value="" placeholder="Search...">
                 </input>
 
-                <button className="search-button"><FontAwesomeIcon icon="search" /></button>
+                <button className="search-button">Search</button>
             </Fragment>
         );
     }

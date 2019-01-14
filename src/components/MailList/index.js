@@ -6,15 +6,15 @@ class MailList extends Component {
     state = {
         openedMsg: [],
         showNewMsg: true,
-    }
+    };
 
     toggleShowNewMsg = () => {
         this.setState({
             showNewMsg: !this.state.showNewMsg,
         })
-    }
+    };
 
-    togleMsg = (item) => {
+    toggleMsg = (item) => {
         let temple = this.state.openedMsg;
 
         if (temple.includes(item.id)) {
@@ -28,24 +28,24 @@ class MailList extends Component {
         this.setState({
             openedMsg: temple
         })
-    }
+    };
     getStatus = (item) => {
         let opnMsg = this.state.openedMsg;
         let status = opnMsg.includes(item) ? null : 'hidden';
 
         return status;
-    }
+    };
 
     render() {
         let mailList = this.props.mails.map((item) => {
             return (<li
                 key={item.id}
-                onClick={() => this.togleMsg(item)}
+                onClick={() => this.toggleMsg(item)}
                 className={item.status ? null : 'active-letter'}>
                 {item.from} - {item.subject}
                 <p className={this.getStatus(item.id)}>{item.text}</p>
             </li>)
-        })
+        });
         return (
             <Fragment>
                 <div className="mail-list">

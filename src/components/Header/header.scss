@@ -12,63 +12,36 @@ img {
 }
 
 input {
-  margin-bottom: .5rem;
-  box-sizing: border-box;
-  border-radius: 4px;
-  height: 2rem;
-  width: 17rem;
-  background: #292929;
-  color: white;
-  line-height: 300;
-  font-size: 15px;
-  padding-left: 20px;
-  border: 0;
+  height: 30px;
+  width: 400px;
 }
 
 .search-button {
-  margin-top: .7rem;
-  margin-left: 3rem;
-  //border: 0;
-  width: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 1rem;
   height: 2rem;
-  box-sizing: border-box;
-  border-radius: 20%;
-  //background-color: white;
+  align-items: center;
+}
+
+.search-button {
+  background-color: #75b5ff;
   color: black;
-  cursor: pointer;
+  font-size: 13px;
+  width: 5rem;
+  height: 2rem;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 2rem;
 }
 
 .exit-button {
-  margin-left: 20rem;
-  display: flex;
-}
-
-.search {
+  background-color: gainsboro;
   color: black;
+  font-size: 13px;
+  width: 5rem;
+  height: 2rem;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 2rem;
 }
-
-li {
-  cursor: pointer;
-  list-style: none;
-  font-size: 30px;
-  font-weight: 400;
-  margin-right: 10rem;
-}
-
-ul {
-  margin-top: 5rem;
-}
-
-li:hover {
-  background-color: gray;
-  opacity: 0.9;
-}
-
-.active {
-  background-color: red;
-}
-
-.active:hover {
-  background-color: red;
-}
-
