@@ -38,13 +38,17 @@ class MailList extends Component {
 
     render() {
         let mailList = this.props.mails.map((item) => {
-            return (<li
-                key={item.id}
-                onClick={() => this.toggleMsg(item)}
-                className={item.status ? null : 'active-letter'}>
-                {item.from} - {item.subject}
-                <p className={this.getStatus(item.id)}>{item.text}</p>
-            </li>)
+            return (
+                <ul>
+
+                    <li
+                        key={item.id}
+                        onClick={() => this.toggleMsg(item)}
+                        className={item.status ? null : 'active-letter'}>
+                        {item.from} - {item.subject}
+                        <p className={this.getStatus(item.id)}>{item.text}</p>
+                    </li>
+                </ul>)
         });
         return (
             <Fragment>

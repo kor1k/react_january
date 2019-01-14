@@ -1,2 +1,16 @@
-* {
+li {
+  cursor: pointer;
+  list-style: none;
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+ul {
+  margin-top: 3.5rem;
+}
+
+li:hover {
+  opacity: .8;
+  color: #282c34;
 }

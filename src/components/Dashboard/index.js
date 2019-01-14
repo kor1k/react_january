@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
-import Dashboard from '../src/components/Dashboard'
+import Header from '../Header'
+import Menu from '../Menu'
+import MailList from '../MailList'
 
 import './App.scss';
 

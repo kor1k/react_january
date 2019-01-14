@@ -17,7 +17,7 @@ class Menu extends Component {
 
     render() {
         let folderList = this.state.folders.map((item) => {
-            let classN = null
+            let classN = null;
             if (item.id == this.props.active) {
                 classN = "active"
             }

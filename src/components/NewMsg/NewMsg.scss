@@ -1,7 +1,43 @@
 .new-email {
+  box-sizing: border-box;
   width: 400px;
   position: fixed;
   bottom: 10px;
-  right: 50px;
+  right: 70px;
   border: 1px solid #ccc;
+}
+
+.newMsgButtonSend {
+  margin: 10px 10px 10px 10px;
+}
+
+.newMsgButtonSend {
+  background-color: #75b5ff;
+  color: black;
+  font-size: 13px;
+  width: 5rem;
+  height: 2rem;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 2rem;
+}
+
+.newMsgButtonCancel {
+  background-color: red;
+  opacity: .7;
+  color: black;
+  font-size: 13px;
+  width: 5rem;
+  height: 2rem;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 2rem;
+}
+
+.new-email-title {
+  text-align: center;
+  color: cornflowerblue;
+  font-size: 20px;
+  box-sizing: border-box;
+  margin: 15px 0 15px 0;
 }
